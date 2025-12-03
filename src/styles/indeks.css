@@ -1,0 +1,93 @@
+:root {
+  --blue: #1f6074;
+  --text: #2e2e2e;
+  --muted: #8b8b8b;
+  --bg: #faf8f5;
+}
+
+/* WRAPPER */
+.indeks-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+
+/* TITLE */
+.indeks-page h1 {
+  text-align: center;
+  color: var(--blue);
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* SUBTEXT */
+.indeks-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 38px;
+  font-size: 1.05rem;
+}
+
+/* SLATKO / SLANO TOGGLE */
+.toggle-group {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.toggle-btn {
+  padding: 10px 26px;
+  border-radius: 30px;
+  border: 2px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+.toggle-btn.active,
+.toggle-btn:hover {
+  background: var(--blue);
+  color: white;
+}
+
+/* CATEGORY LIST */
+.category-list {
+  display: grid;
+  gap: 18px;
+}
+
+.category-item {
+  display: block;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ececec;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.category-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* TEXT INSIDE */
+.category-item h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.category-item span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

@@ -1,0 +1,63 @@
+.putovanja-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.putovanja-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.putovanja-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.putovanja-hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.putovanja-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.putovanje-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.putovanje-card:hover {
+  transform: translateY(-5px);
+}
+
+.putovanje-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.putovanje-card h2 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin: 16px;
+}
+
+.putovanje-card p {
+  margin: 0 16px 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

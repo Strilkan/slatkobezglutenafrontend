@@ -1,0 +1,272 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+.ap-wrap {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.ap-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.ap-btn {
+  padding: 10px 16px;
+  background: #3f6df7;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ap-btn:hover {
+  background: #2f54c7;
+}
+
+.ap-btn.ghost {
+  background: #e7e7e7;
+  color: #333;
+}
+
+.ap-btn.ghost:hover {
+  background: #d5d5d5;
+}
+
+.ap-btn.danger {
+  background: #ff4d4d;
+}
+
+.ap-btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.ap-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.ap-flex-gap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.ap-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.ap-tabs button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #e7e7e7;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ap-tabs button.active {
+  background: #3f6df7;
+  color: white;
+}
+
+/* ===========================
+   GRID LIST
+=========================== */
+
+.ap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px;
+}
+
+.ap-item .thumb {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  background: #f2f2f2;
+  margin-bottom: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ap-item .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ap-item .meta h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ap-item .muted {
+  color: #777;
+  font-size: 14px;
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.ap-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 9999;
+}
+
+.ap-modal-body {
+  width: 100%;
+  max-width: 800px;
+  max-height: 95vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.ap-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ap-x {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* FORM GRID */
+.ap-form .ap-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.ap-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.ap-check {
+  margin-top: 28px;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Full-width inputs */
+label.full {
+  grid-column: span 2;
+}
+
+/* ===========================
+   ACTIONS
+=========================== */
+
+.ap-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.ap-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  z-index: 99999;
+}
+
+.ap-toast.ok {
+  background: #44c767;
+}
+
+.ap-toast.err {
+  background: #ff4d4d;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 768px) {
+  .ap-form .ap-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  label.full {
+    grid-column: span 1;
+  }
+
+  .ap-modal-body {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .ap-toolbar .ap-flex-gap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ap-tabs {
+    flex-wrap: wrap;
+  }
+
+  .ap-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ap-item .thumb {
+    height: 150px;
+  }
+
+  .ap-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,118 @@
+/* -----------------------------------------------
+   FOOTER — Slatko bez glutena
+------------------------------------------------- */
+
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0 20px 40px;
+}
+
+/* LOGO / INFO */
+.footer-logo h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+.footer-logo p {
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social {
+  text-decoration: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social.insta {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.social.fb {
+  background: #4267b2;
+}
+
+.social:hover {
+  opacity: 0.85;
+}
+
+/* BOTTOM LINE */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-bottom a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}

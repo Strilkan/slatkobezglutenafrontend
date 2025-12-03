@@ -1,0 +1,358 @@
+/* -----------------------------------------------
+   GLOBAL STYLING – Slatko bez glutena
+------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --bg: #fdfcf9;
+  --text: #2d2d2d;
+  --accent: #c6a76d;
+  --accent-light: #f0e6d2;
+  --border: #e7e3dc;
+  --muted: #777;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------
+   NAVBAR
+------------------------------------------------- */
+.nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO / BRAND */
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+/* LINKS */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+/* BURGER MENU (mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-200%);
+    transition: 0.4s ease;
+  }
+
+  .links.active {
+    transform: translateY(0);
+  }
+
+  .links a {
+    font-size: 1.1rem;
+  }
+}
+
+/* -----------------------------------------------
+   HERO SECTION (Home)
+------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: var(--accent-light);
+  color: var(--text);
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* -----------------------------------------------
+   GRID & RECIPE CARDS
+------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.recipe-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  font-family: "Playfair Display", serif;
+  padding: 16px 16px 8px;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.recipe-card .excerpt {
+  padding: 0 16px 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* -----------------------------------------------
+   RECIPE DETAIL
+------------------------------------------------- */
+.recipe-detail {
+  max-width: 800px;
+  margin: 50px auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-detail h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.recipe-detail .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.recipe-detail img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.recipe-detail h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.recipe-detail ul {
+  padding-left: 20px;
+}
+
+.recipe-detail .share {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.recipe-detail button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recipe-detail button:hover {
+  background: #b79355;
+}
+
+/* -----------------------------------------------
+   SEARCH BAR
+------------------------------------------------- */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+
+.search-bar button {
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background: #b79355;
+}
+
+/* -----------------------------------------------
+   FOOTER
+------------------------------------------------- */
+footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 30px 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+/* -----------------------------------------------
+   SMOOTH SCROLLING
+------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* -----------------------------------------------
+   FOCUS STATES FOR ACCESSIBILITY
+------------------------------------------------- */
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* -----------------------------------------------
+   LOADING STATES
+------------------------------------------------- */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE
+------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav .links a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+  }
+
+  .search-bar input {
+    width: 70%;
+  }
+
+  .recipe-detail {
+    margin: 20px;
+    padding: 20px;
+  }
+}

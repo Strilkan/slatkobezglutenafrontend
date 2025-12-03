@@ -1,0 +1,54 @@
+.nav-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  height: 68px; /* ✅ veći logo */
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+}
+
+.nav-links a {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f6074;
+  transition: 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #13485a;
+  border-bottom: 2px solid #1f6074;
+  padding-bottom: 4px;
+}
+
+/* 📱 Responsivno */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-logo img {
+    height: 54px;
+  }
+}

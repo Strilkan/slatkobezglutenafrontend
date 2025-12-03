@@ -1,0 +1,47 @@
+.login-page {
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.login-page h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-page input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.login-page button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-page button:hover {
+  background: #b79355;
+}
+
+.status {
+  margin-top: 16px;
+  font-weight: 600;
+}

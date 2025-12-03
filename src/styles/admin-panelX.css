@@ -1,0 +1,223 @@
+:root {
+  --bg: #faf8f5;
+  --card: #ffffff;
+  --text: #2a2a2a;
+  --muted: #8b8b8b;
+  --accent: #1f6074;
+  --accent-600: #174a57;
+  --ok: #22c55e;
+  --err: #ef4444;
+  --bord: #ece7df;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ap-wrap {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+  color: var(--text);
+}
+
+.ap-card {
+  background: var(--card);
+  border: 1px solid var(--bord);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.ap-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.ap-tabs button {
+  background: #fff;
+  border: 1px solid var(--bord);
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--accent);
+}
+.ap-tabs button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.ap-flex-gap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.ap-input {
+  border: 1px solid var(--bord);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+  min-width: 180px;
+}
+.ap-input:focus {
+  border-color: var(--accent);
+}
+
+.ap-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.ap-btn:hover {
+  background: var(--accent-600);
+}
+.ap-btn.ghost {
+  background: #fff;
+  border: 1px solid var(--bord);
+  color: #333;
+}
+.ap-btn.danger {
+  background: #e11d48;
+}
+.ap-btn.small {
+  padding: 7px 10px;
+  font-size: 0.9rem;
+}
+
+.ap-toast {
+  position: sticky;
+  top: 12px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.ap-toast.ok {
+  background: var(--ok);
+}
+.ap-toast.err {
+  background: var(--err);
+}
+
+.ap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1000px) {
+  .ap-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .ap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ap-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.ap-item .thumb {
+  width: 90px;
+  height: 90px;
+  flex: 0 0 90px;
+  background: #f5f2ee;
+  border: 1px solid var(--bord);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-weight: 800;
+  overflow: hidden;
+}
+.ap-item .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ap-item .meta {
+  flex: 1;
+}
+.ap-item .meta h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.ap-item .meta .muted {
+  margin: 4px 0 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.ap-item .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ap-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+.ap-modal-body {
+  width: min(900px, 96vw);
+}
+.ap-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ap-x {
+  background: #fff;
+  border: 1px solid var(--bord);
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.ap-form {
+  margin-top: 10px;
+}
+.ap-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.ap-grid-2 .full {
+  grid-column: 1/-1;
+}
+
+.ap-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+.ap-check {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+  padding-top: 24px;
+}
+
+.ap-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}

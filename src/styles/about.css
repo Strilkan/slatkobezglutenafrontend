@@ -1,0 +1,72 @@
+.about-page {
+  width: 100%;
+  margin: 0 auto;
+  color: #1f6074;
+}
+
+/* GORNJI KREM DIO */
+.about-intro {
+  background: #f5ede3; /* krem nijansa */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-intro-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-intro img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 4px solid white;
+}
+
+.about-intro p {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #444;
+  font-style: italic;
+}
+
+/* BIJELI DIO */
+.about-content {
+  background: #ffffff;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px 40px;
+}
+
+.about-content p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  color: #2b2b2b;
+}
+
+.about-content strong {
+  color: #1f6074; /* plava boja loga */
+}
+
+.about-link {
+  color: #1f6074; /* plava iz loga */
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 96, 116, 0.4);
+  transition: 0.2s;
+}
+
+.about-link:hover {
+  color: #144652;
+  border-bottom-color: rgba(31, 96, 116, 1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .about-intro img {
+    width: 160px;
+    height: 160px;
+  }
+}

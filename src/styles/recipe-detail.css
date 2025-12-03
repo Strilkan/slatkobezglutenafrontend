@@ -1,0 +1,159 @@
+:root {
+  --blue: #1f6074;
+  --text: #2a2a2a;
+  --muted: #7d7d7d;
+  --bg: #faf8f5;
+}
+
+.recipe-detail {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  color: var(--text);
+}
+
+.recipe-hero img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-bottom: 26px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.recipe-meta {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.recipe-short {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+}
+
+.recipe-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.recipe-body h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+
+.recipe-body p,
+.recipe-body li {
+  line-height: 1.55;
+}
+
+.recipe-notes {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.recipe-notes h2 {
+  color: var(--blue);
+}
+
+.recipe-actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.recipe-actions button,
+.recipe-actions a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #1f6074;
+  color: #1f6074;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.recipe-actions button:hover,
+.recipe-actions a:hover {
+  background: #1f6074;
+  color: white;
+}
+
+@media print {
+  .recipe-actions,
+  .navbar,
+  footer {
+    display: none !important;
+  }
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+}
+
+.back-button:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateX(-4px);
+}
+
+.error-message {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.error-message p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .recipe-body {
+    grid-template-columns: 1fr;
+  }
+  
+  .back-button {
+    margin-bottom: 16px;
+  }
+}
